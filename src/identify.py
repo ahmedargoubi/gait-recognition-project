@@ -14,7 +14,7 @@ def load_encrypted_db():
     with open(db_path, "r") as f:
         return json.load(f)
 
-def identify_person(query_feature: np.ndarray, threshold: float = 0.75):
+def identify_person(query_feature: np.ndarray, threshold: float = 0.30):
     """Identifie une personne par similarité cosinus"""
     db = load_encrypted_db()
     best_match = None
